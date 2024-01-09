@@ -4,3 +4,9 @@ files:
   - source: /
     destination: /var/www/html
     overwrite: false
+hooks:
+  BeforeInstall:
+
+  AfterInstall:
+
+  ApplicationStop:
