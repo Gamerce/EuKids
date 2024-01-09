@@ -1,8 +1,5 @@
 <?php
 
-echo "hej";
+echo "Detta är ett test på speed!";
 
 ?>
-
-
-va
