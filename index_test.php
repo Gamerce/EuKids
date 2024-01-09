@@ -1,5 +1,5 @@
 <?php
 
-echo "jaa ";
+echo "Test ftp ";
 
 ?>
