@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include '../php_pages/configConn.php';
 
 	$json_array = array();
@@ -14,17 +14,17 @@
 
 	//User Likes
 	if ((isset($_GET['UserName']))
-	&& isset($_GET['Password']) 
+	&& isset($_GET['Password'])
 	&& (isset($_GET["UserLikes"]) && $_GET['UserLikes'] == "1")) {
         $username = $_GET['UserName'];
         $password = $_GET['Password'];
-		
-		
+
+
         $sql = "SELECT * FROM users WHERE username_id = '".$username."' AND password = '".$password."' ";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 		$userID = $row["id"];
-		
+
 		$sql2 = "SELECT * FROM user_likes where user_id = '".$userID."'";
 		$result2 = mysqli_query($conn,$sql2);
 		while ($row2 = mysqli_fetch_assoc($result2)) {
@@ -37,12 +37,12 @@
 	//Select all from games
 
 	if ((isset($_GET["All"]) && $_GET['All'] == "1")  || (isset($_GET["games"]) && $_GET['games'] == "1"))  {
-		$sql = "SELECT * FROM games";  
+		$sql = "SELECT * FROM games";
 		$result = mysqli_query($conn, $sql);
-		while($row = mysqli_fetch_assoc($result))  
-		{  
-			 $json_array[] = $row;  
-		}  
+		while($row = mysqli_fetch_assoc($result))
+		{
+			 $json_array[] = $row;
+		}
 	}
 
 	// Select al from audiobooks
@@ -53,7 +53,7 @@
 		$sql = "SELECT * FROM audiobooks";
 		$result = mysqli_query($conn, $sql);
 
-		while ($row = mysqli_fetch_assoc($result)) 
+		while ($row = mysqli_fetch_assoc($result))
 		{
 			$json_array[] = $row;
 		}
@@ -65,7 +65,7 @@
 		$sql = "SELECT * FROM videos";
 		$result = mysqli_query($conn, $sql);
 
-		while ($row = mysqli_fetch_assoc($result)) 
+		while ($row = mysqli_fetch_assoc($result))
 		{
 			$json_array[] = $row;
 		}
@@ -74,7 +74,7 @@
     if ((isset($_GET["All"]) && $_GET['All'] == "1") || (isset($_GET["files"]) && $_GET['files'] == "1")) {
         $sql = "SELECT * FROM files";
         $result = mysqli_query($conn, $sql);
-        
+
         while ($row = mysqli_fetch_assoc($result))
         {
             $json_array[] = $row;
@@ -84,19 +84,31 @@
     if ((isset($_GET["All"]) && $_GET['All'] == "1") || (isset($_GET["Universe"]) && $_GET['Universe'] == "1")) {
         $sql = "SELECT * FROM Universe";
         $result = mysqli_query($conn, $sql);
+
+        while ($row = mysqli_fetch_assoc($result))
+        {
+            $json_array[] = $row;
+        }
+    }
+
+		if ((isset($_GET["All"]) && $_GET['All'] == "1") || (isset($_GET["PlatformSettings"]) && $_GET['PlatformSettings'] == "1")) {
+        $sql = "SELECT * FROM platform_settings";
+        $result = mysqli_query($conn, $sql);
         
         while ($row = mysqli_fetch_assoc($result))
         {
             $json_array[] = $row;
         }
     }
-    
+
+
+
     //Select all from User Likes
-    
+
     if ((isset($_GET["All"]) && $_GET['All'] == "1") || (isset($_GET["user_likes"]) && $_GET['user_likes'] == "1")) {
         $sql = "SELECT * FROM user_likes";
         $result = mysqli_query($conn, $sql);
-        
+
         while ($row = mysqli_fetch_assoc($result))
         {
             $json_array[] = $row;
