@@ -1,0 +1,23 @@
+.content{
+	padding-top: 150px;
+}
+
+.labelDesign{
+	display: inline-block;
+	color: rgb(68, 66, 179);
+	width: 110px;
+}
+
+.inputDesign{
+	width: 12%;
+	height: 25px;
+	border-radius: 5px;
+	border: 1px solid blue;
+}
+
+.addVideoTittleDesign{
+	color: rgb(68, 66, 179);
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 20px;
+}

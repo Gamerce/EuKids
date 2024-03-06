@@ -1,0 +1,403 @@
+*{
+	margin: 0;
+}
+
+body{
+	overflow-x:hidden;
+}
+a{
+	text-decoration: none;
+}
+
+a:link
+{
+    color: white;
+}
+
+a:visited
+{
+    color: white;
+}
+
+a:hover 
+{
+    color: blue;
+}
+.navbar{
+	width: 100%;
+	height: 50px;
+	background-color: black;
+}
+
+.navbar-container{
+	display: flex;
+	align-items: center;
+	padding: 0 50px;
+	height: 100%;
+	color: white;
+	
+}
+
+.logo-container{
+	flex: 1;
+}
+
+.logo{
+	font-size: 30px;
+	color: #4dbf00;
+}
+.menu-container{
+	flex: 6;
+}
+
+.menu-list{
+	display: flex;
+	position: relative;
+	margin-right: 3%;
+	list-style: none;
+}
+
+.menu-list-item{
+	margin-right: 40px;
+}
+
+.menu-list-item a{
+	text-decoration: none;
+}
+.profile-container{
+	flex: 2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.profile-text-container{
+	padding-right: 20px;
+}
+.profile-text{
+	margin: 0;
+}
+
+.game-list-item-heart{
+	padding: 5px;
+	padding-top: 10px;
+	background-color: red;
+	color: white;
+	border-radius: 50%;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	bottom: 60px;
+	left: 90px;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+
+.heart{
+	font-size: 23px;
+	display:flex;
+	align-items:center;
+}
+
+.toggle{
+	width: 40px;
+	height: 20px;
+	background-color: white;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+}
+
+.toggle-icon{
+	color: goldenrod;
+}
+
+.toggle-ball{
+	width: 18px;
+	height: 18px;
+	background-color: black;
+	position: absolute;
+	right: 1px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 1s ease all;
+}
+.sidebar{
+	width: 50px;
+	height: 100%;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	padding-top: 150px;
+}
+
+.side-icon{
+	color: white;
+	font-size: 35px;
+	margin-bottom: 50px;
+}
+
+.container{
+	background-color: #151515;
+	min-height: calc(100vh - 50px);
+	color: white;
+}
+
+.content-container {
+	margin-left: 50px;
+}
+
+.featured-content{
+	background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% !important;
+	height: 60vh;
+	padding: 45px;
+	
+}
+
+.featured-title{
+	font-size: 80px;
+	color: blue;
+}
+
+.featured-description{
+	width: 500px;
+	color: light-grey; 
+	padding-bottom: 20px;
+	padding-top: 30px;
+}
+
+.featured-button{
+	width:80px;
+	height:50px;
+	background-color: green;
+	color: white;
+	padding: 10px, 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.featured-button-googleplay{
+	font-size: 22px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.featured-button-apple{
+	font-size: 22px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.game-list-container{
+	padding: 0 20px;
+}
+
+.game-list-wrapper{
+	position: relative;
+	overflow: hidden;
+	
+	
+}
+
+.game-list , .audio-list{
+	display: flex;
+	align-items: center;
+	height: 300px;
+	transform: translateX(0);
+	transition: all 1s ease-in-out;
+	
+}
+
+.game-list-item{
+	margin-right: 30px;
+	position: relative;
+	
+}
+
+.game-list-item:hover .game-list-item-img{
+	transform:scale(1.2);
+	margin: 0 30px;
+	opacity: 0.5;
+}
+
+.game-list-item:hover .game-list-item-tittle,
+.game-list-item:hover .game-list-item-desc,
+.game-list-item:hover .game-list-item-button,
+.game-list-item:hover .game-list-item-heart{
+	opacity: 1;
+}
+
+.game-list-item-img{
+	width: 350px;
+	height: 250px;
+	object-fit: cover;
+	transition: all 1s ease-in-out;
+	
+}
+
+.game-list-item-tittle{
+	background-color: #333;
+	padding: 0 10px;
+	font-size: 28px;
+	font-weight: bold;
+	position: absolute;
+	top: 3%;
+	left: 30px;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+
+.game-list-item-desc{
+	background-color: #333;
+	padding: 10px;
+	font-size: 14px;
+	width:150px;
+	position: absolute;
+	top: 20%;
+	left: 30px;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+
+.game-list-item-button{
+	padding: 10px;
+	background-color: green;
+	color: white;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	bottom: 60px;
+	left: 30px;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+
+
+
+.arrow{
+	font-size: 120px;
+	position: absolute;
+	top: 90px;
+	right: 0;
+	color: gray;
+	opacity: .5;
+	cursor: pointer;
+}
+
+.arrowLeft{
+	font-size: 120px;
+	position: absolute;
+	top: 90px;
+	left: 0;
+	color: gray;
+	opacity: .5;
+	cursor: pointer;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	background-color: black;
+	
+}
+
+.footer-container{
+	display: flex;
+	align-items: center;
+	padding: 0 50px;
+	height: 100%;
+	width: 100%;
+	color: white;
+}
+
+.logo-footer-container{
+	flex: 1;
+	
+}
+
+.logo-footer{
+	font-size: 30px;
+}
+
+
+.footer-contact-text{
+	display: flex;
+	position: relative;
+	float: right;
+	margin-right: 100px;
+	list-style: none;
+}
+
+.container.active{
+	background-color: white;
+}
+
+.game-list-tittle.active{
+	color: black;
+}
+
+.navbar-container.active{
+	background-color: white;
+	color: black;
+}
+
+.sidebar.active{
+	background-color: white;
+	color: black;
+}
+
+a.active{
+	
+	text-decoration: none;
+}
+
+a:link.active
+{
+    color: black;
+}
+
+a:visited.active
+{
+    color: black;
+}
+
+a:hover.active 
+{
+    color: blue;
+}
+
+.toggle.active{
+	background-color: black;
+}
+.toggle-ball.active{
+	background-color: white;
+	transform: translateX(-20px);
+}
+
+.game-list-item-heart.active{
+	padding: 5px;
+	padding-top: 10px;
+	background-color: white;
+	color: red;
+	border-radius: 50%;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	align-items:center;
+	bottom: 60px;
+	left: 90px;
+	opacity: 1;
+	transition: all 1s ease-in-out;
+}

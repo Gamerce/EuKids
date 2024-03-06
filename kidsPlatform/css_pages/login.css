@@ -1,0 +1,29 @@
+body {
+            background-color: #f7f7f7;
+            padding-top: 70px;
+        }
+        .login-container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        .login-container h3 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .btn-login {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+        .btn-login:hover {
+            background-color: #0056b3;
+        }

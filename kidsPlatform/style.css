@@ -1,0 +1,152 @@
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+padding-left: 100px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+@font-face {font-family: "PurissimaBoldW00-Regular";
+    src: url("//db.onlinewebfonts.com/t/7cf9fd1dbd9b63d372722fe7b9f13acc.eot");
+    src: url("//db.onlinewebfonts.com/t/7cf9fd1dbd9b63d372722fe7b9f13acc.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/7cf9fd1dbd9b63d372722fe7b9f13acc.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/7cf9fd1dbd9b63d372722fe7b9f13acc.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/7cf9fd1dbd9b63d372722fe7b9f13acc.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/7cf9fd1dbd9b63d372722fe7b9f13acc.svg#PurissimaBoldW00-Regular") format("svg");
+}
+
+:root {
+  --yellow: #FFE500;
+  --green: #3BDD56;
+  --red: #EF4F00;
+  --blue: #477EED;
+  --lightblue: #D6F4FF;
+  --purple: #D953E2;
+  --white: #fcfcfc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+padding-left: 100px;
+  width: 100vw;
+  height: 230px;
+  font-family: PurissimaBoldW00-Regular;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+.cards {
+  width: 100%;
+
+  margin: auto;
+  display: flex;
+
+  padding: 0px;
+  justify-content: space-around;
+}
+
+.card {
+  width: 400px;
+  height: 175px;
+  background-color: var(--white);
+  margin: 0px;
+  border-radius: 0px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 25% 40% 33%;
+  padding: 15px 25px;
+}
+
+/* uncomment this to see the css grid layout of a card
+.card > div {
+  background-color: orange;
+  margin: 1px;
+} */
+
+.card-icon {
+  font-size: 1.5em;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-amount {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.card-title {
+  color: #9E9FA3;
+  padding-top: 25px;
+}
+
+.card-amount {
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+
+.analytics-percentage:after {
+  content: '%';
+  margin-left: -5px;
+
+}
+
+.fa-fire:hover:after {
+  content: 'This is on fire!';
+  font-size: 0.8em;
+  text-align: left;
+  padding: 20px;
+  position: absolute;
+  margin-top: 1em;
+  border-radius: 0 10px 10px 10px;
+  width: 130px;
+  height: 20px;
+  background-color: black;
+}
+
+.card-spree {
+  text-align: center;
+}
+.color--yellow {
+  color: var(--yellow);
+}
+.color--red {
+  color: var(--red);
+}
+.color--purple {
+  color: var(--purple);
+}
+.color--blue {
+  color: var(--blue);
+}
+.color--green {
+  color: var(--green);
+}

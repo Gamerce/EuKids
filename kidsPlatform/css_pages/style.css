@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    position: fixed;
+    background-color: rgb(191, 154, 224);
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    padding-bottom: 10px;
+}
+.logo{
+    font-size: 35px;
+    position: relative;
+    left: 3%;
+    color: white;
+    font-weight: bold;
+    line-height: 75px;
+}
+
+ul{
+    position: relative;
+    float: right;
+    margin-right: 3%;
+}
+
+ul li{
+    display: inline-block;
+    line-height: 75px;
+    margin: 0 10px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+
+}
+
+
+
+/*First and second image slide*/
+
+.container{
+    padding-top: 100px;
+
+}
+
+.img{
+    display: block;
+    margin: 0px auto;
+    height: 500px;
+    object-fit: cover;
+}
+
+.small-img {
+    border-radius: 100px;
+    height: 128px;
+    width: 128px;
+}
+
+.small-carousel-item {
+    width: 128px;
+}
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+}
+
+.card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#recipeCarousel {
+    background-color: white;
+}
+
+
+/*Third image slide*/
+
+.selected{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.big-img {
+    border-radius: 20px;
+    height: 200px;
+    width: 300px;
+}
+
+.big-carousel-item {
+    width: 128px;
+}
+.wrapper .carousel-third{
+    white-space: nowrap;
+}
+
+.wrapper .carousel-third img{
+    height: 120px;
+
+}

@@ -1,0 +1,30 @@
+.content{
+	padding-top: 110px;	
+}
+
+.labelDesign{
+	display: inline-block;
+	color: rgb(68, 66, 179);
+	width: 100%;
+}
+
+.inputDesign{
+    width: 15%;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid blue;
+    padding-top: 7px;
+    
+}
+
+.addGameTittleDesign{
+    
+    color: rgb(68, 66, 179);
+    text-align: center;
+    font-weight: bold;
+    width: 320px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+

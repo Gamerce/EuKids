@@ -1,0 +1,62 @@
+ body {
+            background-color: #f1f1f1;
+        }
+
+        .formDesign {
+            padding-top: 50px;
+        }
+
+        .labelDesign {
+            display: block;
+            color: rgb(68, 66, 179);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .registerForm {
+            background-color: #fff;
+            width: 320px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .registerTittleDesign {
+            background-color: rgb(191, 154, 224);
+            color: rgb(68, 66, 179);
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+            padding: 15px 0;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .inputDesign {
+            width: 100%;
+            height: 35px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            background-color: rgb(68, 66, 179);
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(58, 56, 153);
+        }
+
+        .btn-primary:focus {
+            outline: none;
+        }
